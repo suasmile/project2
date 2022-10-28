@@ -1,0 +1,69 @@
+sty;e.css
+
+*{
+box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    border:0;
+}
+
+.container{
+  background-color:blue;
+  color:white;
+  display:flex;
+  height:100vh;
+  width:100vw;
+  justify-content:flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+
+.item{
+    height:10vh;
+    width:100vw;
+    border: 2px solid white;
+    padding: 0;
+    flex-shrink: 4;
+    flex-grow: 4;
+}
+
+.item:hover{
+  background-color: white;
+  width: 100vw;
+  height: 15vh;
+  position: relative;
+  transition-duration: 0.2s, 0.5s;
+  transition-delay: 0.2s, 0.1s;
+}
+
+
+.horizontalscroll{
+  width: 80vw; /* sets the width to 100% of the browser window width */
+	height: 50vh; /* sets the height to 100% of the browser window height */
+	display: flex; /* ADVANCED! https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+	overflow-x: auto; /* lets you scroll horizontally */
+	flex-wrap: nowrap; /* prevents wrapping onto another line */
+  border: 2px solid white;
+  margin-left: 20vw;
+}
+
+.block {
+	width: 80vw; /* can be whatever you want! */
+	height: 45vh; /* can be whatever you want! */
+	border: 2px solid white; /* i just have this so you can see the difference between elements */
+	margin-right: 40px; /* space to the right, outside of the element */
+	margin-left: 40px; /* space to the left, outside of the element */
+  margin-top: 20px;
+	padding: 0; /* space inside the elements */
+	flex-grow: 0; /* prevents items from growing */
+	flex-shrink: 0; /* prevents items from shrinking */
+
+	/* the following lets you center things horizontally + vertically */
+	display: inline-flex; /* overrides the previous display attribute */
+	flex-direction: column; /* the content inside an element will go in a column, not in a row */
+	align-items: center; /* center vertically */
+	justify-content: flex-end; /* center horizontally */
+}
